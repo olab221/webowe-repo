@@ -39,12 +39,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd project
+          cd projekt
           npm install
 
-      - name: Build project
+      - name: Build projekt
         run: |
-          cd project
+          cd projekt
           npm run build -- --base=/repo/
 
       - name: Setup Pages
@@ -53,7 +53,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: project/dist
+          path: projekt/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
