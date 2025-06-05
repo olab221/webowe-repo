@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "webowe-repo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,5 +15,7 @@
     "@tailwindcss/vite": "^4.1.7",
     "date-fns": "^4.1.0",
     "tailwindcss": "^4.1.7"
+    
   }
+
 }
