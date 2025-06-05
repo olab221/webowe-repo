@@ -1,13 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/src/style.css" rel="stylesheet">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <select id="sort-selector" class="bg-gray-200 p-2">
+    <option value="date_asc" selected>Po dacie rosnąco</option>
+    <option value="date_desc">Po dacie malejąco</option>
+    <option value="title_asc">Po nazwie alfabetycznie</option>
+  </select>
+  <h1 class="text-center font-bold">Artykuły</h1>
+  <div id="table-container" class="mx-[25%] mt-10"></div>
+
+  <form id="article-form" class="flex flex-col items-center content-center justify-items-center mx-[25%]" autocomplete="off">
+    <h2 class="font-bold">Dodaj nowy artykuł</h2>
+    <div>
+      <label for="title">Tytuł:</label>
+      <input type="text" id="title" name="title" class="bg-gray-200 m-4" required>
+    </div>
+    <div>
+      <label for="subtitle">Podtytuł:</label>
+      <input type="text" id="subtitle" name="subtitle" class="bg-gray-200 m-4" required>
+    </div>
+    <div>
+      <label for="author">Autor:</label>
+      <input type="text" id="author" name="author" class="bg-gray-200 m-4" required>
+    </div>
+    <div>
+      <label for="created_at">Data utworzenia:</label>
+      <input type="date" id="created_at" name="created_at" class="bg-gray-200 m-4" required>
+    </div>
+    <div>
+      <label for="content">Treść:</label>
+      <textarea id="content" name="content" rows="4" class="bg-gray-200 m-4" required></textarea>
+    </div>
+    <button type="submit" class="bg-gray-200 m-4 px-4 w-60">Dodaj artykuł</button>
+  </form>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
