@@ -13,14 +13,14 @@ sort.addEventListener('change', async (event) => {
 
 const fetchArticles = async (sortBy) => {
     try {
-        let url = ''https://qimfteqvztkmwztdmjez.supabase.co/rest/v1/article?select=*';
+        let url = 'https://qimfteqvztkmwztdmjez.supabase.co/rest/v1/article?select=*';
 
         if (sortBy === 'date_asc') {
-            url = ''https://qimfteqvztkmwztdmjez.supabase.co/rest/v1/article?select=*&order=created_at.asc';
+            url = 'https://qimfteqvztkmwztdmjez.supabase.co/rest/v1/article?select=*&order=created_at.asc';
         } else if (sortBy === 'date_desc') {
-            url = ''https://qimfteqvztkmwztdmjez.supabase.co/rest/v1/article?select=*&order=created_at.desc';
+            url = 'https://qimfteqvztkmwztdmjez.supabase.co/rest/v1/article?select=*&order=created_at.desc';
         } else if (sortBy === 'title_asc') {
-            url = ''https://qimfteqvztkmwztdmjez.supabase.co/rest/v1/article?select=*&order=title.asc';
+            url = 'https://qimfteqvztkmwztdmjez.supabase.co/rest/v1/article?select=*&order=title.asc';
         }
 
         const response = await fetch(url, {
