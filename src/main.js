@@ -89,10 +89,10 @@ const loadArticles = async (sortOption = 'date_asc') => {
 loadArticles();
 const createNewArticle = async ({ title, subtitle, author, content, created_at }) => {
     try {
-        const response = await fetch('https://lkxilyvnwmbxbbhevwxb.supabase.co/rest/v1/article', {
+        const response = await fetch('https://qimfteqvztkmwztdmjez.supabase.co/rest/v1/article?select=*', {
             method: 'POST',
             headers: {
-                apiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxreGlseXZud21ieGJiaGV2d3hiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NTI4MTAsImV4cCI6MjA2MzIyODgxMH0.FbWJZbdZeMxbrcB7QzADsKBrM950VEvx-QLPRyzrheI',
+                apiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFpbWZ0ZXF2enRrbXd6dGRtamV6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2NTA5NjIsImV4cCI6MjA2MzIyNjk2Mn0.KGgTLLlFBlCEwMbO4eLOG7t6FUg1nEowEdsm-yIN-mc',
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ title, subtitle, author, content, created_at }),
