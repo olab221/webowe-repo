@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build -- --base=/vite-project/
+        run: npm run build -- --base=/webowe-repo/
 
       - name: Upload artifact for deployment
         uses: actions/upload-pages-artifact@v3
